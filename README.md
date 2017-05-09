@@ -14,7 +14,7 @@ List of movies:
 
 Search page:
 
-<img src ="https://github.com/giorgim/MovieManagementReact/blob/master/images/search.png">
+<img src ="https://github.com/giorgim/MovieManagementReact/blob/master/images/search_movies.png">
 
 # How to run the project 
 

@@ -1,6 +1,6 @@
 # Description
 
-CRUD web application for movie management. Written using React.js on the front end and  Node.js, Express and Mongo DB on the back end. 
+CRUD web application for movie management. Written using React.js on the front end and  Node.js, Express and Mongo DB on the back end. We also use [Material UI](http://www.material-ui.com/#/ "Material UI") library for react components.
 
 # Screenshots
 

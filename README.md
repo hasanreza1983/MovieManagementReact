@@ -25,7 +25,7 @@ Search page:
 5. Finally, move back to the root directory and type: <code>node index.js</code>
 6. Now you should be able to access the app at: localhost: 3000
 
-NOTE: You need to have mongo database service running.
+**Mongo database**: You need to have mongo database service running.
 
-The client application (written in React.js) is located inside the <client> client </client> folder of the root folder.
+**If you want to update the client app**: The client application (written in React.js) is located inside the <client> client </client> folder of the root folder.
 If you make any changes to the client application, you need to run <code>npm run build</code> inside the <client> client </client> folder. Then, to run the app, you need to move to the root folder again and type: <code>node index.js</code>

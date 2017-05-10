@@ -27,5 +27,5 @@ Search page:
 
 **Mongo database**: You need to have mongo database service running.
 
-**If you want to update the client app**: The client application (written in React.js) is located inside the <code> client </code> folder of the root folder.
-If you make any changes to the client application, you need to run <code>npm run build</code> inside the <code> client </code> folder. Then, to run the app, you need to move to the root folder again and type: <code>node index.js</code>
+**If you want to update the client app**: The client application (written in React.js) is located inside the <code>client</code> folder of the root folder.
+If you make any changes to the client application, you need to run <code>npm run build</code> inside the <code>client</code> folder. Then, to run the app, you need to move to the root folder again and type: <code>node index.js</code>

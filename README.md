@@ -19,11 +19,11 @@ Search page:
 # How to run the project 
 
 1. Clone the project
-2. First, type and run: <code>npm install</code> from the root folder
-3. Now, <code>cd</code> into <code>client</code> directory
-4. type and run: <code>npm install</code>
-5. Finally, move back to the root directory and type: <code>node index.js</code>
-6. Now you should be able to access the app at: localhost: 3000
+2. First, type and run: <code>npm install</code> from the root folder of this project.
+3. Now, <code>cd</code> into <code>client</code> directory of the project.
+4. Again, type and run: <code>npm install</code>
+5. Finally, move back to the root directory of the project, and type: <code>node index.js</code>
+6. Now you should be able to access the app at: `http://localhost:3000` from your browser.
 
 **Mongo database**: You need to have MongoDB server (`mongod`) running.
 

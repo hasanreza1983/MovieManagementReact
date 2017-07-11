@@ -21,6 +21,7 @@ export default class AddMovie extends Component {
 
         this.editMode = false;
 
+        /* start with a blank state */
         this.state = {
             _id: "",
             name: "",
@@ -41,10 +42,18 @@ export default class AddMovie extends Component {
         /* Get query string from the address bar */
         let query = this.props.location.query;
 
+        if(!query){
+            return;
+        }
+
         /* Decide if we are in add or edit mode? */
         this.editMode = query.id ? true : false;
 
-        /* Parse query parameters whic should represent movie details if we are in edit mode */
+        if(!this.editMode){
+            return;
+        }
+
+        /* Copy data from query to the state. */
         state._id = query.id ? query.id : "";
         state.name = query.name ? query.name : "";
         state.director = query.director ? query.director : "";
@@ -65,11 +74,13 @@ export default class AddMovie extends Component {
         /* Are we in add or edit mode? */
         if(!this.editMode) {
 
+            /* We are in add mode, send proper request to the server. */
             $.ajax({
                 type: 'POST',
                 url: '/addnewmovie',
                 data: that.state,
                 success: function (msg) {
+                    /* Movie was added go to main page. */
                     that.props.router.push('/');
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
@@ -83,6 +94,7 @@ export default class AddMovie extends Component {
                 url: '/editmovie',
                 data: that.state,
                 success: function(msg){
+                    /* Movie was edited go to main page. */
                     that.props.router.push('/');
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
@@ -95,13 +107,9 @@ export default class AddMovie extends Component {
 
     handleInputChange(e) {
 
-        /* Get value of target component */
+        /* Handle update of state variables (for controlled components) */
         const value = e.target.value;
-
-        /* Get name attribute of component which was changed */
         const name = e.target.name;
-
-        /* Store data entered in text box in state - this is a controlled element */
         this.setState({
             [name]: value
         });
